@@ -1,0 +1,11 @@
+﻿<log4net>
+
+    <!-- Minimal log4net for making MIniProfiler logging of NHibernate-->
+    <appender  name="Profiler" type="MinProfileNhibernateLog4Net.NhibernateProfilingAppender" />
+
+    <logger name="NHibernate.AdoNet.AbstractBatcher">
+        <level value="DEBUG" />
+        <appender-ref ref="Profiler" />
+    </logger>
+
+</log4net>
